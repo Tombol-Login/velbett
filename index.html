@@ -1,342 +1,306 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VELBETT : Tempat Hiburan Online Buat Semua Orang</title>
+
+  <!-- ✅ META SEO -->
   <meta name="description" content="VELBETT hadir sebagai tempat hiburan online yang bisa dinikmati siapa saja. Dari anak muda sampai orang tua, semua bisa ikut seru-seruan tanpa ribet dan tetap aman.">
+  <meta name="keywords" content="VELBETT, hiburan online, situs resmi, platform terpercaya, game online">
+  <meta name="author" content="VELBETT Official">
   <link rel="canonical" href="https://github.com/Tombol-Login/velbett">
+  <meta name="google-site-verification" content="fMVlvBWSbfEnpmv4EO5Fc74GizQx7MHtvKYx7426TMU" />
+
+  <!-- ✅ OPEN GRAPH -->
+  <meta property="og:title" content="VELBETT : Tempat Hiburan Online Buat Semua Orang">
+  <meta property="og:description" content="Nikmati hiburan online terpercaya dengan layanan cepat, aman, dan penuh keseruan.">
+  <meta property="og:url" content="https://github.com/Tombol-Login/velbett">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ik.imagekit.io/nizt/VELBETT/Seo%20JOGAN%20(14).png?updatedAt=1759103192430">
   <link rel="shortcut icon" href="https://ik.imagekit.io/nizt/velbett/favicon.png?updatedAt=1758567645101" type="image/x-icon">
-</head>
+
+  <!-- ✅ STYLE -->
   <style>
+    :root {
+      --primary: #2E451F;
+      --dark: #000;
+      --light: #f9f6ff;
+      --accent: #ffcc00;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #FFA90D;
-      color: #000000;
+      background: var(--light);
+      color: var(--dark);
     }
+
+    /* HEADER */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 40px;
-      background: #FFA90D;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 15px 25px;
+      background: var(--primary);
+      color: white;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .logo-container img {
-      height: 40px;
-      width: auto;
-    }
-    .logo-text {
-      font-weight: bold;
-      font-size: 20px;
-      color: #000000;
-      letter-spacing: 1px;
+    header img {
+      height: 45px;
     }
     nav a {
-      margin: 0 15px;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: 500;
-      color: #000000;
+      color: white;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #000000;
+      color: var(--accent);
     }
 
     /* HERO */
     .hero {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 40px;
-      background: linear-gradient(90deg, #faf5ff, #f9f6ff);
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 20px;
+      background: linear-gradient(90deg, var(--light), #eef3e6);
     }
     .hero-text {
       flex: 1;
-      padding-right: 40px;
-      min-width: 280px;
+      min-width: 300px;
+      padding: 20px;
     }
     .hero-text h1 {
-      font-size: 40px;
-      font-weight: bold;
-      margin: 0 0 20px;
-      background: linear-gradient(90deg, #000000, #000000);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: var(--dark);
     }
     .hero-text p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.6;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       color: #444;
-
     }
-    .buttons {
+    .cta-buttons {
       display: flex;
       gap: 15px;
       flex-wrap: wrap;
-      justify-content:center
+      justify-content: center;  /* 🔥 bikin tombol selalu di tengah */
     }
-    .buttons a {
-      padding: 14px 28px;
+    .cta-buttons a {
+      padding: 14px 30px;
       border-radius: 8px;
-      font-size: 16px;
       font-weight: bold;
       text-decoration: none;
+      font-size: 16px;
       transition: 0.3s;
-      justify-content:center
+      justify-content: center;  /* 🔥 bikin tombol selalu di tengah */
+
     }
-    .btn-daftar {
-      background: linear-gradient(90deg, #000000, #000000);
+    .btn-primary {
+      background: var(--dark);
       color: white;
     }
-    .btn-daftar:hover {
-      opacity: 0.85;
+    .btn-primary:hover {
+      background: var(--accent);
+      color: var(--dark);
     }
-    .btn-login {
-      border: 2px solid #000000;
-      color: #000000;
-      background: #FFA90D;
+    .btn-secondary {
+      border: 2px solid var(--dark);
+      color: var(--dark);
+      background: white;
     }
-    .btn-login:hover {
-      background: #000000;
-      color: #FFA90D;
+    .btn-secondary:hover {
+      background: var(--dark);
+      color: white;
     }
-    .hero-banner {
+    .hero-img {
       flex: 1;
-      display: flex;
-      justify-content: center;
-      min-width: 280px;
+      min-width: 300px;
+      text-align: center;
     }
-    .hero-banner img {
-      width: 500px;
-      height: 500px;
-      object-fit: cover;
-      border-radius: 20px;
+    .hero-img img {
+      max-width: 90%;
+      border-radius: 16px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     }
 
+    /* FEATURES */
     section {
-      padding: 60px 40px;
+      padding: 60px 20px;
+      text-align: center;
       max-width: 1200px;
       margin: auto;
-      text-align: center;
     }
     h2 {
-      font-size: 28px;
+      font-size: 32px;
       margin-bottom: 20px;
-      color: #000000;
+      color: var(--dark);
     }
     .features {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      margin-top: 30px;
-      flex-wrap: wrap;
     }
     .feature {
-      background: #FFA90D;
-      border: 1px solid #e5d4fa;
+      background: white;
+      padding: 25px;
       border-radius: 12px;
-      padding: 20px;
       width: 280px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
     }
     .feature h3 {
-      margin-top: 10px;
-      color: #000000;
-      font-size: 18px;
+      margin: 15px 0;
+      color: var(--primary);
     }
-    .gallery {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-    .gallery img {
-      width: 180px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .cta {
-      background: linear-gradient(90deg, #000000, #000000);
+
+    /* BIG CTA */
+    .cta-banner {
+      background: var(--primary);
       color: white;
-      padding: 60px 20px;
-      text-align: center;
-      border-radius: 12px;
+      padding: 50px 20px;
+      border-radius: 16px;
       margin: 60px auto;
+      text-align: center;
       max-width: 1000px;
     }
-    .cta h2 {
-      color: white;
+    .cta-banner h2 {
       margin-bottom: 20px;
+      font-size: 28px;
     }
-    .cta button {
-      padding: 14px 30px;
-      margin: 10px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
+    .cta-banner a {
+      display: inline-block;
+      margin-top: 20px;
+      background: var(--accent);
+      color: var(--dark);
+      padding: 16px 40px;
+      border-radius: 10px;
+      font-size: 18px;
       font-weight: bold;
-      cursor: pointer;
+      text-decoration: none;
       transition: 0.3s;
     }
-    .cta .btn-menu {
-      background: #FFA90D;
-      color: #000000;
+    .cta-banner a:hover {
+      background: white;
+      color: var(--dark);
     }
-    .cta .btn-find {
-      background: #000000;
-      color: #FFA90D;
-    }
+
+    /* FOOTER */
     footer {
-      background: #f9f6ff;
-      padding: 40px;
+      background: var(--dark);
+      color: white;
+      padding: 40px 20px;
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
-      font-size: 14px;
+      justify-content: space-between;
+      text-align: center;
     }
     footer .col {
       flex: 1 1 250px;
       margin: 10px;
     }
     footer h4 {
-      margin-bottom: 10px;
-      color: #000000;
+      margin-bottom: 15px;
+      color: var(--accent);
     }
 
     /* RESPONSIVE */
-    @media(max-width: 900px) {
+    @media(max-width: 768px) {
       .hero {
         flex-direction: column;
         text-align: center;
-        padding: 40px 20px;
       }
-      .hero-text {
-        padding: 0;
-        margin-bottom: 30px;
+      .hero-text h1 {
+        font-size: 32px;
       }
-      .buttons {
+      .cta-buttons {
         justify-content: center;
       }
     }
   </style>
-  <style>
-    :root {
-      --logo-size: 100px; /* 🔥 cukup ubah angka ini */
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .logo-container img {
-      height: var(--logo-size);
-      width: auto;
-    }
-  </style>
-</head>
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- HEADER -->
   <header>
-    <div class="logo-container">
-      <img src="https://ik.imagekit.io/nizt/velbett/logo%20(1).png?updatedAt=1758567647650" alt="VELBETT Logo">
-      <div class="logo-text"></div>
-    </div>
+    <img src="https://ik.imagekit.io/nizt/velbett/favicon.png?updatedAt=1758567645101" alt="VELBETT Logo">
     <nav>
-      <a href="https://t.ly/velbettt">VELBETT</a>
-      <a href="https://t.ly/velbettt">GAME ONLINE</a>
-      <a href="https://t.ly/velbettt">LINK ALTERNATIF</a>
+      <a href="https://t.ly/velbettt">Beranda</a>
+      <a href="https://t.ly/velbettt">Game</a>
+      <a href="https://t.ly/velbettt">Promo</a>
+      <a href="https://t.ly/velbettt">Kontak</a>
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-text">
-      <h1>VELBETT : Tempat Hiburan Online Buat Semua Orang</h1>
+      <h1><span style="color:var(--primary)">VELBETT</span> : Tempat Hiburan Online Buat Semua Orang</h1>
       <p>VELBETT hadir sebagai tempat hiburan online yang bisa dinikmati siapa saja. Dari anak muda sampai orang tua, semua bisa ikut seru-seruan tanpa ribet dan tetap aman.</p>
-      <div class="buttons">
-        <a href="https://t.ly/velbett4d" class="btn-daftar">Daftar</a>
-        <a href="https://t.ly/velbettt" class="btn-login">Login</a>
+      <div class="cta-buttons">
+
+        <a href="https://t.ly/velbettt4d" class="btn-primary">Daftar Sekarang</a>
+        <a href="https://t.ly/velbettt" class="btn-secondary">Login</a>
       </div>
     </div>
-    <div class="hero-banner">
+    <div class="hero-img">
       <img src="https://ik.imagekit.io/nizt/velbett/Seo%20JOGAN%20(13).png?updatedAt=1759102594087" alt="VELBETT Banner">
     </div>
   </section>
 
-  <!-- Why Choose -->
+  <!-- FEATURES -->
   <section>
-    <h2>Mengapa memilih VELBETT ?</h2>
-    <p></p>
+    <h2>Kenapa Pilih VELBETT?</h2>
     <div class="features">
       <div class="feature">
         <h3>Hiburan Lengkap</h3>
-        <p>Dari game seru sampai pilihan aktivitas online yang bikin betah, semua ada di sini.</p>
+        <p>Berbagai pilihan game online menarik untuk menemani waktu santai kamu.</p>
       </div>
       <div class="feature">
-        <h3>Santai & Seru</h3>
-        <p>Cocok banget buat isi waktu senggang, ngumpul bareng, atau sekadar hiburan ringan setelah seharian sibuk.</p>
+        <h3>Akses Super Cepat</h3>
+        <p>Registrasi, login, hingga transaksi jadi lebih cepat & mudah.</p>
       </div>
       <div class="feature">
-        <h3>Mudah & Praktis</h3>
-        <p>Daftar gampang, deposit dan withdraw cepat, nggak bikin pusing.</p>
+        <h3>Aman & Terpercaya</h3>
+        <p>VELBETT mengutamakan integritas dan keamanan setiap pengguna.</p>
       </div>
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section>
-    <h2></h2>
-    </div>
-                    <div class="banner_gif mt-3 text-center">
-                        <a rel="nofollow noopener" href="https://t.ly/velbettt">
-                            <img src="https://ik.imagekit.io/nizt/Template/jackpot%20klikhoki.gif?updatedAt=1756576646148" width="50%" height="auto" alt="Daftar Sekarang">
-                        </a>
-                    </div>
-    <p></p>
-  </section>
-
-  <!-- CTA -->
-  <div class="cta">
-    <h2>Siap Menjelajahi VELBETT?</h2>
-    <p>Di VELBETT, hiburan bukan cuma sekadar permainan, tapi juga pengalaman seru yang bisa dinikmati bareng orang tersayang. Jadi, kalau nyari platform hiburan online yang ramah keluarga, penuh keseruan, dan selalu bikin happy, jawabannya jelas ada di sini.</p>
-    <a href="https://t.ly/velbett4d" class="btn-daftar">BERGABUNG</a>
-        
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <h2>Gabung dengan Ribuan Member yang Sudah Percaya VELBETT</h2>
+    <p>Jangan lewatkan keseruan dan pengalaman terbaik dari platform hiburan online resmi ini.</p>
+    <a href="https://t.ly/velbettt4d">🚀 Mulai Sekarang</a>
   </div>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <div class="col">
-      <div class="logo-container">
-      <img src="https://ik.imagekit.io/nizt/velbett/favicon.png?updatedAt=1758567645101" alt="VELBETT Logo">
-      <div class=""></div>
-    </div>
-      <p>VELBETT : Tempat Hiburan Online Buat Semua Orang</p>
+      <img src="https://ik.imagekit.io/nizt/velbett/favicon.png?updatedAt=1758567645101" alt="VELBETT Logo" width="60">
+      <p>© 2025 VELBETT - Platform Hiburan Online Resmi dan Terpercaya</p>
     </div>
     <div class="col">
-      <h4>Tautan Cepat</h4>
-      <p>VELBETT<br>GAME ONLINE<br>LINK ALTERNATIF</p>
+      <h4>Navigasi</h4>
+      <p>Beranda | Game | Promo | Kontak</p>
     </div>
-    <div class="banner_gif mt-3 text-center">
-    <a rel="nofollow noopener" href="https://t.ly/velbettt">
-    <img src="https://ik.imagekit.io/nizt/Template/fd5e788a62d004257d31fab64bab80ae.gif?updatedAt=1759088351531" width="70%" height="flex-end" alt="Daftar Sekarang">
-                        </a>
-                    </div>
+    <div class="col">
+      <h4>Ikuti Kami</h4>
+      <p>Facebook | Instagram | Twitter</p>
+    </div>
   </footer>
+
 </body>
 </html>
