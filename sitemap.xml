@@ -10,8 +10,11 @@
 <url>
   <loc>https://tombol-login.github.io/velbett/sitemap.xml</loc>
   <lastmod>2025-09-29T17:17:10+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
 </url>
 
 
 </urlset>
+
 
